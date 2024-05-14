@@ -1,0 +1,9 @@
+.toggle-signing {
+  cursor: pointer;
+  color: rgb(53, 150, 247);
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #f8f9fa;
+}

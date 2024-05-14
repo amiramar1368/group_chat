@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/fonawesome.min.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/signin.css" />
+    <link rel="stylesheet" href="/css/fontawesome.min.css" />
+
+    <script src="/js/iziToast.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="/css/iziToast.min.css" />
+    <title>Sign in</title>
+  </head>
+  <body class="text-center">
+    <section class="bg-light py-3 py-md-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4">
+            <div class="card border border-light-subtle rounded-3 shadow-sm">
+              <div class="card-body p-3 p-md-4 p-xl-5">
+                <div class="text-center mb-3">
+                  <h2 id="app-header">Group Chat</h2>
+                </div>
+                <h2 id="signin-header" class="fs-6 fw-normal text-center text-secondary mb-4 d-none">
+                  Sign in to your account
+                </h2>
+                <h2 id="signup-header" class="fs-6 fw-normal text-center text-secondary mb-4">Sign up in group chat</h2>
+                <form id="sign-in" class="d-none">
+                  <div class="row gy-2 overflow-hidden">
+                    <div class="col-12">
+                      <div class="form-floating mb-3">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="sign-in-username"
+                          placeholder="name@example.com"
+                          required
+                        />
+                        <label for="sign-in-username" class="form-label">Username</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-floating mb-3">
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="sign-in-password"
+                          value=""
+                          placeholder="Password"
+                          required
+                        />
+                        <label for="sign-in-password" class="form-label">Password</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="d-grid my-3">
+                        <button class="btn btn-primary btn-lg" type="submit">Sign In</button>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <p class="m-0 text-secondary text-center">
+                        Don't have an account?
+                        <span class="toggle-signing" class="link-primary text-decoration-none">Sign up</span>
+                      </p>
+                    </div>
+                  </div>
+                </form>
+                <form id="sign-up">
+                  <div class="row gy-2 overflow-hidden">
+                    <div class="col-12">
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="sign-up-fullname" placeholder="fullname" required />
+                        <label for="sign-up-fullname" class="form-label">Fullname</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-floating mb-3">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="username"
+                          id="sign-up-username"
+                          placeholder="username"
+                          required
+                        />
+                        <label for="sign-up-username" class="form-label">Username</label>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="form-floating mb-3">
+                        <input
+                          type="password"
+                          class="form-control"
+                          name="password"
+                          id="sign-up-password"
+                          value=""
+                          placeholder="Password"
+                          required
+                        />
+                        <label for="sign-up-password" class="form-label">Password</label>
+                      </div>
+                      <input type="file" name="" id="avatar" class="d-none" />
+                      <label for="avatar" class="form-label btn btn-info">image</label>
+                      <span id="file-name"> </span>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="d-grid my-3">
+                        <button class="btn btn-primary btn-lg" type="submit">sign up</button>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <p class="m-0 text-secondary text-center">
+                        already have an account?
+                        <span class="toggle-signing" class="link-primary text-decoration-none">Sign in</span>
+                      </p>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="/js/axios.js"></script>
+    <script src="/js/user.js"></script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<div class="modal" id="add-user-to-group">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Add New Group</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <select class="form-select" id="group-modal">
+            <% for(let group in groups){%>
+              <option value="<%=groups[group].id%>"><%=groups[group].name%></option>
+                <%}%>
+          </select>
+          <select class="form-select" id="user-modal">
+            <% for(let user in users){%>
+              <% if(users[user].id!==1 && users[user].id!==userId) {%>
+              <option value="<%=users[user].id%>"><%=users[user].fullname%></option>
+                <%}%>
+                <%}%>
+          </select>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button id="add-to-group"  type="button" class="btn btn-primary" >Add</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
