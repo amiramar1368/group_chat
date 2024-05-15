@@ -53,7 +53,7 @@ io.on("connection", (socket) => {
   });
 
   socket.on("message", async (data) => {
-    const token = socket.request.headers.cookie.split("=")[1];
+    const token = socket.request.headers.cookie.split("token=")[1];
     const groupId = "group_"+data.groupId;
     const userGroups =  getUserByToken(token).groups;
     const hasAccess = userGroups.find(group=>group.id==data.groupId)
