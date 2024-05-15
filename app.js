@@ -58,7 +58,7 @@ io.on("connection", (socket) => {
     const userGroups =  getUserByToken(token).groups;
     const hasAccess = userGroups.find(group=>group.id==data.groupId)
     if(hasAccess){
-      const response = await ChatController.addNewGroupChat(token, data);
+      const response = await ChatController.addNewGroupMessage(token, data);
       if(response.success){
         io.to(groupId).emit("message", { senderId:response.senderId, text:response.text ,image:response.image});
       }else{

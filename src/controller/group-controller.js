@@ -23,7 +23,7 @@ export class GroupController {
       userInfo.groups.push({ id: newgroup.id, name });
       const newToken = jwt.sign(userInfo, ACCESS_TOKEN_KEY);
       res.cookie("token", newToken, { httpOnly: true });
-      return res.sendSuccess(201,"New Group Add Succesfully",{ groupId: newgroup.id })
+      return res.sendSuccess(201, "New Group Add Succesfully", { groupId: newgroup.id });
     } catch (err) {
       if (err.errors) {
         return res.sendError(409, err.errors[0].message);
