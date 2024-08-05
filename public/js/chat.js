@@ -103,6 +103,10 @@ addToGroup.addEventListener("click", async (e) => {
   addToGroupModalInstance.hide(modal);
 });
 
+socket.on("left the group",(data)=>{
+  console.log(data);
+})
+
 socket.on("message", (data) => {
   const message = putMessagesIntoElement(user, data);
   messageBox.innerHTML += message;
